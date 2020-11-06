@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         _rigidbody2D = this.GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
