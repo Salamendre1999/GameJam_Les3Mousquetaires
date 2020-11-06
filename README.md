@@ -1,1 +1,4 @@
 GameJam_Les3Mousquetaires
+Alessio Soldi
+Ahmed Belabbes
+Nicola Mylonas
