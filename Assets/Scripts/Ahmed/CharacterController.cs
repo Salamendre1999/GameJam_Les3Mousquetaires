@@ -7,14 +7,15 @@ public class CharacterController : MonoBehaviour
 {
     private Rigidbody2D playerRigidBody2D;
     private bool lookAtRight = true;
+    [SerializeField] private float speed;
     private void Awake()
     {
         playerRigidBody2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    public void Move(float horizontalMove, float verticalMove, float speed)
+    public void Move(float horizontalMove, float verticalMove)
     {
-        Vector3 movement = new Vector2(horizontalMove,verticalMove);
+        Vector3 movement = new Vector2(horizontalMove,verticalMove).normalized;
         playerRigidBody2D.velocity = movement * speed;
 
         if (horizontalMove < 0 && lookAtRight)
