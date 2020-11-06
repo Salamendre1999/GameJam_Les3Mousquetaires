@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="efd6690c-c483-4f17-a817-77784de3d8f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameJam_Les3Mousquetaires/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Environnement.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Environnement/AssetAhmed.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Environnement/AssetAlessio.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Environnement/AssetNicolas.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SceneNicolas.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptAhmed.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptAlessio.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptNicolas.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NicoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneNicolas.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NicoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneAlessio.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneAlessio.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptAhmed/ScriptTestAhmed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptAhmed/ScriptTestAhmed.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptAlessio/ScriptTestAlessio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptAlessio/ScriptTestAlessio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptNicolas/ScriptTestNicolas.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptNicolas/ScriptTestNicolas.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604669821939</updated>
-      <workItem from="1604669851464" duration="1165000" />
+      <workItem from="1604669851464" duration="1794000" />
     </task>
     <servers />
   </component>
