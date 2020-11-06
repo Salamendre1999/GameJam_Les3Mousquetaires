@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 45dac95bf63cc7f4fac2b7e04b8dabc1
-=======
-guid: 8b44101e3ddec894b96a1e891f774304
->>>>>>> CreatePlayerPrefab
+guid: 6722e45569628fa4780dd7586045b149
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
