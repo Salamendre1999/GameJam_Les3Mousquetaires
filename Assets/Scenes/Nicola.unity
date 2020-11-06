@@ -121,6 +121,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &400592789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400592791}
+  - component: {fileID: 400592790}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &400592790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400592789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c65308f17160d7488858d0f0bc89c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 11400000, guid: 4e902d94a6b47ab4eb5ce6b6f88dd097, type: 2}
+--- !u!4 &400592791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400592789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 277.41595, y: 309.04773, z: -60.396866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420126649
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,11 +364,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 959420458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8dff6c6f782ab49abcc5a99297a1af, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c65308f17160d7488858d0f0bc89c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  artworkImage: {fileID: 0}
+  monster: {fileID: 11400000, guid: 4e902d94a6b47ab4eb5ce6b6f88dd097, type: 2}
 --- !u!4 &959420460
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ce91ba7c3b5bc48b35c5b5a397aa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 5
 --- !u!65 &1945119944
 BoxCollider:
   m_ObjectHideFlags: 0
