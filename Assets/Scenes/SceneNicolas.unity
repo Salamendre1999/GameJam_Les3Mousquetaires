@@ -121,11 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
---- !u!1 &127303786
-=======
---- !u!1 &104052365
->>>>>>> SceneNicoSetup
+--- !u!1 &1552790359
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,15 +129,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 127303789}
-  - component: {fileID: 127303788}
-  - component: {fileID: 127303787}
-=======
-  - component: {fileID: 104052368}
-  - component: {fileID: 104052367}
-  - component: {fileID: 104052366}
->>>>>>> SceneNicoSetup
+  - component: {fileID: 1552790362}
+  - component: {fileID: 1552790361}
+  - component: {fileID: 1552790360}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -149,35 +139,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!81 &127303787
-=======
---- !u!81 &104052366
->>>>>>> SceneNicoSetup
+--- !u!81 &1552790360
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 127303786}
+  m_GameObject: {fileID: 1552790359}
   m_Enabled: 1
---- !u!20 &127303788
-=======
-  m_GameObject: {fileID: 104052365}
-  m_Enabled: 1
---- !u!20 &104052367
->>>>>>> SceneNicoSetup
+--- !u!20 &1552790361
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 127303786}
-=======
-  m_GameObject: {fileID: 104052365}
->>>>>>> SceneNicoSetup
+  m_GameObject: {fileID: 1552790359}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -214,21 +190,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-<<<<<<< HEAD
---- !u!4 &127303789
-=======
---- !u!4 &104052368
->>>>>>> SceneNicoSetup
+--- !u!4 &1552790362
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 127303786}
-=======
-  m_GameObject: {fileID: 104052365}
->>>>>>> SceneNicoSetup
+  m_GameObject: {fileID: 1552790359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
