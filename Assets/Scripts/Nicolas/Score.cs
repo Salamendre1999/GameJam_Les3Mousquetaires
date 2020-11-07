@@ -10,6 +10,8 @@ namespace Nicolas
         public bool playing;
 
         private float Timer;
+
+        public float scoreAmount =0f;
         // Start is called before the first frame update
 
         // Update is called once per frame
@@ -17,7 +19,7 @@ namespace Nicolas
         {
             if (playing == true)
             {
-
+                scoreAmount += 1f * Time.deltaTime;
                 Timer += Time.deltaTime;
                 int minutes = Mathf.FloorToInt(Timer / 60f);
                 int seconds = Mathf.FloorToInt(Timer % 60f);
