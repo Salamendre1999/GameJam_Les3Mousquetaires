@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Alessio
 {
@@ -11,21 +12,58 @@ namespace Alessio
         {
             if (layersAuthorized == (layersAuthorized | (1 << other.gameObject.layer)))
             {
-                other.attachedRigidbody.GetComponent<IDamageable>()?.TakeDamage(value);
+                var iDamageable = other.attachedRigidbody.GetComponent<IDamageable>();
+                try
+                {
+                    var playerHealth = (PlayerHealth) iDamageable;
+                    if (!playerHealth.IsInvincible)
+                        other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
+                }
+                catch
+                {
+                    // ignored
+                }
+
+                iDamageable?.TakeDamage(value);
+            }
+            /*
+            other.attachedRigidbody.GetComponent<IDamageable>()?.TakeDamage(value);
+            if (other.attachedRigidbody.GetComponent<PlayerHealth>()?.IsInvincible == false)
+            {
                 other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
             }
+            */
         }
     
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (layersAuthorized == (layersAuthorized | (1 << other.gameObject.layer)))
             {
-                other.rigidbody.GetComponent<IDamageable>()?.TakeDamage(value);
-                other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
+                //Debug.Log(other.rigidbody.GetComponent<PlayerHealth>());
+                var iDamageable = other.rigidbody.GetComponent<IDamageable>();
+                try
+                {
+                    var playerHealth = (PlayerHealth) iDamageable;
+                    if (!playerHealth.IsInvincible)
+                        other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
+                }
+                catch
+                {
+                    // ignored
+                }
+
+                iDamageable?.TakeDamage(value);
             }
-
-
         }
 
+        private void OnCollisionStay2D(Collision2D other)
+        {
+            OnCollisionEnter2D(other);
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            OnTriggerEnter2D(other);
+        }
     }
 }

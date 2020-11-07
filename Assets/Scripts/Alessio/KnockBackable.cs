@@ -9,8 +9,8 @@ namespace Alessio
         [SerializeField] protected float knockBackDuration;
         [SerializeField] protected int knockBackForce = 100;
         [SerializeField] protected Rigidbody2D rigidbody2D;
-    
-    
+
+
         private void Awake()
         {
             rigidbody2D = GetComponent<Rigidbody2D>();

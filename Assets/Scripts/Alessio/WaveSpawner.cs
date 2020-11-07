@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
+using Vector2 = System.Numerics.Vector2;
 
 namespace Alessio
 {
@@ -18,18 +19,18 @@ namespace Alessio
 
         public void Start()
         {
-            _gameObject = GameObject.FindGameObjectWithTag("Enemy");
+            Debug.Log("Hello");
+            //_gameObject = GameObject.FindGameObjectWithTag("Enemy");
             waveCountDown = timeBetweenWaves;
+            Debug.Log(waveCountDown); // OK
         }
         
         public void Update()
         {
-
             if (spawnState == SpawnState.Waiting)
             {
                 if (!EnemyIsAlive())
                 {
-                    Debug.Log("Wave completed, GJ :)");
                     BeginTheNewWave();
                 }
                 else
@@ -45,6 +46,10 @@ namespace Alessio
                     StartCoroutine(SpawnWave(waves[waveIndex]));
                 }
             }
+            else
+            {
+                waveCountDown -= Time.deltaTime;
+            }
         }
 
         public void BeginTheNewWave()
@@ -56,6 +61,7 @@ namespace Alessio
             if (waveIndex == waves.Length - 1)
             {
                 waveIndex = 0;
+                Debug.Log("All waves completed !");
             }
             else
             {
@@ -68,7 +74,8 @@ namespace Alessio
             searchAnyEnemyCountdown -= Time.deltaTime;
             if (searchAnyEnemyCountdown <= 0f)
             {
-                if (_gameObject == null)
+                searchAnyEnemyCountdown = 1f;
+                if (GameObject.FindGameObjectWithTag("Enemy") == null)
                 {
                     return false;
                 }
@@ -78,6 +85,7 @@ namespace Alessio
 
         public IEnumerator SpawnWave(Wave wave)
         {
+            Debug.Log("test3");
             spawnState = SpawnState.Spawning;
 
             for (int i = 0; i < wave.numberOfEnemies; i++)
@@ -91,9 +99,11 @@ namespace Alessio
 
         public void SpawnEnemy()
         {
+            Debug.Log("test2");
             var randomSpawnPoint = Random.Range(0, spawners.Length);
-            var randomMonster = Random.Range(0, waves[waveIndex].numberOfEnemies);
+            var randomMonster = Random.Range(0, waves[waveIndex].waveEnemies.Length);
             var spawnerTransform = spawners[randomSpawnPoint].transform;
+            //Debug.Log(waves[waveIndex].waveEnemies.Length);
             var enemy = waves[waveIndex].waveEnemies[randomMonster];
             Instantiate(enemy, spawnerTransform.position, spawnerTransform.rotation);
         }
