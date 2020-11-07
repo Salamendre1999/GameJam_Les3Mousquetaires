@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     
     private float horizontalMove;
     private float verticalMove;
-    private bool froze = false;
 
     private bool isAttacking;
     // Update is called once per frame
@@ -28,16 +27,5 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(horizontalMove,verticalMove, isAttacking);
         isAttacking = false;
     }
-
-    public void Freeze()
-    {
-        froze = true;
-        horizontalMove = 0;
-        verticalMove = 0;
-    }
-
-    public void UnFreeze()
-    {
-        froze = false;
-    }
+    
 }
