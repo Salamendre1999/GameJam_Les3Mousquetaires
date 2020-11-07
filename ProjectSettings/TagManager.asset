@@ -44,9 +44,6 @@ TagManager:
   - name: Ground
     uniqueID: 4260056515
     locked: 0
-  - name: Character
-    uniqueID: 535311733
-    locked: 0
   - name: interactiveObjects
     uniqueID: 3591260811
     locked: 0
@@ -58,6 +55,9 @@ TagManager:
     locked: 0
   - name: Lights
     uniqueID: 1511616871
+    locked: 0
+  - name: Character
+    uniqueID: 535311733
     locked: 0
   - name: Weapons
     uniqueID: 1180822131
