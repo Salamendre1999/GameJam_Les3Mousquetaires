@@ -16,6 +16,7 @@ namespace Nicolas
         {
 
             modele.sprite = datas.artwork;
+            
 
         }
 
