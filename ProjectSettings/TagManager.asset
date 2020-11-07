@@ -56,6 +56,9 @@ TagManager:
   - name: Decor
     uniqueID: 4115253687
     locked: 0
+  - name: Lights
+    uniqueID: 1511616871
+    locked: 0
   - name: Weapons
     uniqueID: 1180822131
     locked: 0
