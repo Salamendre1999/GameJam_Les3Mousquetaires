@@ -19,6 +19,7 @@ namespace Alessio
         [SerializeField] private float invincibilityDuration;
         [SerializeField] private float knockBackDuration;
         [SerializeField] private int knockBackForce = 100;
+        [SerializeField] private PlayerMovement playerMovement;
         public CameraShake cameraShake;
         private Rigidbody2D _rigidbody2D;
 
@@ -48,8 +49,11 @@ namespace Alessio
 
         public void KnockBack()
         {
+            // TODO: mettre froze à true
+            playerMovement.Freeze();
             _rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * (knockBackForce - knockBackResistance));
             StartCoroutine("CancelKnockBack");
+            playerMovement.UnFreeze();
         }
 
         private IEnumerator CancelKnockBack()

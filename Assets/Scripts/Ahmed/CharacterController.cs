@@ -14,7 +14,7 @@ public class CharacterController : MonoBehaviour
     private void Awake()
     {
         playerRigidBody2D = gameObject.GetComponent<Rigidbody2D>();
-        weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
+        //weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
     }
 
     public void Move(float horizontalMove, float verticalMove, bool isAttacking)
