@@ -17,7 +17,18 @@ namespace Alessio
                 {
                     var playerHealth = (PlayerHealth) iDamageable;
                     if (!playerHealth.IsInvincible)
-                        other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
+                    {
+                        if (other.gameObject.GetComponent<PlayerMovement>())
+                        {
+                            other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(true);
+                        }
+                        else
+                        {
+                            other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(false);
+                        }
+                        
+                    }
+
                 }
                 catch
                 {
@@ -45,7 +56,17 @@ namespace Alessio
                 {
                     var playerHealth = (PlayerHealth) iDamageable;
                     if (!playerHealth.IsInvincible)
-                        other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
+                    {
+                        if (other.gameObject.GetComponent<PlayerMovement>())
+                        {
+                            other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(true);
+                        }
+                        else
+                        {
+                            other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(false);
+                        }
+                        
+                    }
                 }
                 catch
                 {

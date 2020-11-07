@@ -4,6 +4,6 @@ namespace Alessio
 {
     public interface IKnockBackable
     {
-        void KnockBackHandler();
+        void KnockBackHandler(bool isPlayer);
     }
 }
