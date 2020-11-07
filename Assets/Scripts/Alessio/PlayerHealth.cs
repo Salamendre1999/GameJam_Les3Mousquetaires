@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Alessio
 {
@@ -17,6 +18,7 @@ namespace Alessio
         [SerializeField] private float invincibilityDuration;
         [SerializeField] private float knockBackDuration;
         [SerializeField] private int knockBackForce = 100;
+        public CameraShake cameraShake;
         private Rigidbody2D _rigidbody2D;
 
         private void Awake()
@@ -35,9 +37,11 @@ namespace Alessio
                 StartCoroutine(HandleInvincibilityDelay());
                 
                 if (currentHealth <= 0)
-                    onDeath?.Invoke(); 
+                    onDeath?.Invoke();
                 
+                StartCoroutine(cameraShake.Shake(.15f, .4f));
                 KnockBack();
+                
             }
         }
 
