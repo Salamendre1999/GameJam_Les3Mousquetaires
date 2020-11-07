@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b8b53febe22a29240997c0ee9ad0bfa7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: The Loccosta FREE
+  fontNames:
+  - The Loccosta FREE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 421a4033b8ea77c47a69ff5f1bbc090b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public int maxHealth = 100;
+    [SerializeField] private int maxHealth = 100;
 
-    public int currentHealth;
+    [SerializeField] private int currentHealth;
 
-    public HealthBar healthBar;
+    [SerializeField] private HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
