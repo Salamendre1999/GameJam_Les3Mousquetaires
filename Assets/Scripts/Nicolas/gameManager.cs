@@ -1,18 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class gameManager : MonoBehaviour
+namespace Nicolas
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManager : Singleton<GameManager>
     {
         
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void NewGame()
+        {
+            LoadScene("Level1");
+           
+        }
+
+        public void GameOver()
+        {
+            LoadScene("GameOver");
+        }
+
+        public void MainMenu()
+        {
+            LoadScene("MainMenu");
+        }
+
+        public void LoadScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+            var asyncload = SceneManager.LoadSceneAsync(sceneName);
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
+
+        protected override void Cleanup()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void Initialize()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
