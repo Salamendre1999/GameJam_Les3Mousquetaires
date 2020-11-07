@@ -15,7 +15,7 @@ TagManager:
   - 
   - Player
   - Ennemies
-  - 
+  - Weapons
   - 
   - 
   - 
@@ -47,9 +47,15 @@ TagManager:
   - name: Character
     uniqueID: 535311733
     locked: 0
-  - name: Weapons
-    uniqueID: 1180822131
+  - name: interactiveObjects
+    uniqueID: 3591260811
     locked: 0
   - name: Wall
     uniqueID: 2132992723
+    locked: 0
+  - name: Decor
+    uniqueID: 4115253687
+    locked: 0
+  - name: Weapons
+    uniqueID: 1180822131
     locked: 0
