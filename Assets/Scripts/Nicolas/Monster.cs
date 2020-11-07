@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Alessio;
+using UnityEngine;
 
 namespace Nicolas
 {
@@ -8,7 +9,7 @@ namespace Nicolas
         public string monsterName;
         public Sprite artwork;
         public int damage;
-        public int health;
+        public int monsterHealth;
 
     }
 }

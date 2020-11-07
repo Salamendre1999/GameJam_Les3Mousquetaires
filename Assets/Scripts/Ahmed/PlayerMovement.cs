@@ -27,4 +27,5 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(horizontalMove,verticalMove, isAttacking);
         isAttacking = false;
     }
+    
 }
