@@ -33,6 +33,10 @@ public class CharacterController : MonoBehaviour
 
         if (isAttacking)
         {
+            var weaponCollider = gameObject.GetComponentInChildren<CapsuleCollider2D>();
+            weaponCollider.enabled = true;
+            StartCoroutine(DisableWeaponCollider(weaponCollider));
+            
             if (verticalMove > 0 && verticalMove>Math.Abs(horizontalMove))
             {
                 weaponAnimator.Play("TopSwingSword");
@@ -47,6 +51,15 @@ public class CharacterController : MonoBehaviour
         }
 
     }
+
+    public IEnumerator DisableWeaponCollider(CapsuleCollider2D weaponCollider)
+    {
+        yield return new WaitForSeconds(.4f);
+        weaponCollider.enabled = false;
+    }
+    
+    
+    
     private void FlipSprite()
     {
         lookAtRight = !lookAtRight;
