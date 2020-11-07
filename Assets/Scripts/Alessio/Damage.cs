@@ -13,66 +13,15 @@ namespace Alessio
             if (layersAuthorized == (layersAuthorized | (1 << other.gameObject.layer)))
             {
                 var iDamageable = other.attachedRigidbody.GetComponent<IDamageable>();
-                try
-                {
-                    var playerHealth = (PlayerHealth) iDamageable;
-                    if (!playerHealth.IsInvincible)
-                    {
-                        if (other.gameObject.GetComponent<PlayerMovement>())
-                        {
-                            other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(true);
-                        }
-                        else
-                        {
-                            other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(false);
-                        }
-                        
-                    }
-
-                }
-                catch
-                {
-                    // ignored
-                }
-
                 iDamageable?.TakeDamage(value);
             }
-            /*
-            other.attachedRigidbody.GetComponent<IDamageable>()?.TakeDamage(value);
-            if (other.attachedRigidbody.GetComponent<PlayerHealth>()?.IsInvincible == false)
-            {
-                other.attachedRigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
-            }
-            */
         }
     
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (layersAuthorized == (layersAuthorized | (1 << other.gameObject.layer)))
             {
-                //Debug.Log(other.rigidbody.GetComponent<PlayerHealth>());
                 var iDamageable = other.rigidbody.GetComponent<IDamageable>();
-                try
-                {
-                    var playerHealth = (PlayerHealth) iDamageable;
-                    if (!playerHealth.IsInvincible)
-                    {
-                        if (other.gameObject.GetComponent<PlayerMovement>())
-                        {
-                            other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(true);
-                        }
-                        else
-                        {
-                            other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler(false);
-                        }
-                        
-                    }
-                }
-                catch
-                {
-                    // ignored
-                }
-
                 iDamageable?.TakeDamage(value);
             }
         }

@@ -22,7 +22,6 @@ namespace Alessio
         {
             if (!isInvincible)
             {
-                Debug.Log("Hello");
                 currentHealth -= damage;
                 isInvincible = true;
 
