@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f49990fad9a8d49b45c0e6d033657a, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: 
-  monsterName: 
-  artwork: {fileID: 0}
-  damage: 0
-  monsterHealth: 0
+  monsterName: Zombie
+  artwork: {fileID: -1865513366290063461, guid: 7274613d7be265146ac23d46d2d31136,
+    type: 3}
+  damage: 20
+  monsterHealth: 20

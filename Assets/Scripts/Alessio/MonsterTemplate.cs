@@ -6,6 +6,7 @@ namespace Alessio
     [RequireComponent(typeof(MonsterHealth))]
     public class MonsterTemplate : MonoBehaviour
     {
+        /*
         [SerializeField] private Monster template;
         private MonsterHealth _monsterHealth;
         //private MonsterDamage _damage;
@@ -41,5 +42,6 @@ namespace Alessio
                 _currentTemplate = template;
             }
         }
+        */
     }
 }

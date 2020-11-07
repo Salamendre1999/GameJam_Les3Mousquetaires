@@ -18,13 +18,17 @@ namespace Alessio
 
         public void KnockBackHandler()
         {
-            rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * (knockBackForce - knockBackResistance));
-            StartCoroutine("CancelKnockBack");
+            if (gameObject.activeSelf)
+            {
+                rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * (knockBackForce - knockBackResistance));
+                StartCoroutine("CancelKnockBack"); 
+            }
         }
 
         public IEnumerator CancelKnockBack()
         {
-            throw new System.NotImplementedException();
+            yield return new WaitForSeconds(knockBackDuration);
+            rigidbody2D.velocity = Vector2.zero;
         }
         
     }

@@ -15,7 +15,6 @@ namespace Alessio
         {
             other.rigidbody.GetComponent<IDamageable>()?.TakeDamage(value);
             other.rigidbody.GetComponent<IKnockBackable>()?.KnockBackHandler();
-            other.rigidbody.GetComponent<IKnockBackable>()?.CancelKnockBack();
         }
 
     }

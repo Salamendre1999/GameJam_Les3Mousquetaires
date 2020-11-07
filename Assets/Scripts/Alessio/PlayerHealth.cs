@@ -22,13 +22,16 @@ namespace Alessio
             {
                 currentHealth -= damage;
                 isInvincible = true;
-                
+
+                if (currentHealth <= 0)
+                {
+                    onDeath?.Invoke();
+                    return;
+                }
+
                 StartCoroutine(playerInvincibilityFrame.InvincibilityVisual(isInvincible,
                     playerSpriteRenderer, invincibilityVisualDelay));
                 StartCoroutine(playerInvincibilityFrame.HandleInvincibilityDelay(invincibilityDuration));
-                
-                if (currentHealth <= 0)
-                    onDeath?.Invoke();
                 
                 StartCoroutine(cameraShake.Shake(.15f, .4f));
                 isInvincible = false;
