@@ -15,6 +15,7 @@ namespace Alessio
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
         [SerializeField] private float invincibilityVisualDelay;
         [SerializeField] private float invincibilityDuration;
+        [SerializeField] private float knockBackDuration;
         [SerializeField] private int knockBackForce = 100;
         private Rigidbody2D _rigidbody2D;
 
@@ -43,6 +44,14 @@ namespace Alessio
         public void KnockBack()
         {
             _rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * knockBackForce);
+            StartCoroutine("CancelKnockBack");
+        }
+
+        private IEnumerator CancelKnockBack()
+        {
+            yield return new WaitForSeconds(knockBackDuration);
+            // A montrer au prof !
+            _rigidbody2D.velocity = Vector2.zero;
         }
 
         private IEnumerator InvincibilityVisual()
