@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Alessio;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerInvincibilityFrame : MonoBehaviour
@@ -22,9 +24,12 @@ public class PlayerInvincibilityFrame : MonoBehaviour
         }
     }
 
-    public IEnumerator HandleInvincibilityDelay(float invincibilityDuration)
+    public IEnumerator HandleInvincibilityDelay(float invincibilityDuration,
+        EndInvincibilityDelay endInvincibilityDelay)
     {
+        Debug.Log(invincibilityDuration + " " + _isInvincible);
         yield return new WaitForSeconds(invincibilityDuration);
         _isInvincible = false;
+        endInvincibilityDelay();
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 
 namespace Alessio
 {
+    public delegate void EndInvincibilityDelay();
     public class PlayerHealth : Health, IDamageable
     {
         [SerializeField] private bool isInvincible = false;
@@ -15,11 +16,14 @@ namespace Alessio
         [SerializeField] private float invincibilityDuration;
         public CameraShake cameraShake;
         public PlayerInvincibilityFrame playerInvincibilityFrame;
-        
+
+        public bool IsInvincible => isInvincible;
+
         public void TakeDamage(int damage)
         {
             if (!isInvincible)
             {
+                Debug.Log("Hello");
                 currentHealth -= damage;
                 isInvincible = true;
 
@@ -29,16 +33,22 @@ namespace Alessio
                     return;
                 }
 
+                EndInvincibilityDelay endInvincibilityDelay = ResetInvincibility;
+                
+                
                 StartCoroutine(playerInvincibilityFrame.InvincibilityVisual(isInvincible,
                     playerSpriteRenderer, invincibilityVisualDelay));
-                StartCoroutine(playerInvincibilityFrame.HandleInvincibilityDelay(invincibilityDuration));
-                
+                StartCoroutine(playerInvincibilityFrame.HandleInvincibilityDelay(
+                    invincibilityDuration, endInvincibilityDelay));
                 StartCoroutine(cameraShake.Shake(.15f, .4f));
-                isInvincible = false;
-
             }
         }
-        
-        
+
+        public void ResetInvincibility()
+        {
+            Debug.Log("Callback : " + isInvincible);
+            isInvincible = false;
+            Debug.Log("Callback : " + isInvincible);
+        } 
     }
 }
