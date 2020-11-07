@@ -27,7 +27,6 @@ public class PlayerInvincibilityFrame : MonoBehaviour
     public IEnumerator HandleInvincibilityDelay(float invincibilityDuration,
         EndInvincibilityDelay endInvincibilityDelay)
     {
-        Debug.Log(invincibilityDuration + " " + _isInvincible);
         yield return new WaitForSeconds(invincibilityDuration);
         _isInvincible = false;
         endInvincibilityDelay();

@@ -14,7 +14,6 @@ namespace Alessio
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
         [SerializeField] private float invincibilityVisualDelay;
         [SerializeField] private float invincibilityDuration;
-        public CameraShake cameraShake;
         public PlayerInvincibilityFrame playerInvincibilityFrame;
 
         public bool IsInvincible => isInvincible;
@@ -23,7 +22,6 @@ namespace Alessio
         {
             if (!isInvincible)
             {
-                Debug.Log("Hello");
                 currentHealth -= damage;
                 isInvincible = true;
 
@@ -40,7 +38,6 @@ namespace Alessio
                     playerSpriteRenderer, invincibilityVisualDelay));
                 StartCoroutine(playerInvincibilityFrame.HandleInvincibilityDelay(
                     invincibilityDuration, endInvincibilityDelay));
-                StartCoroutine(cameraShake.Shake(.15f, .4f));
             }
         }
 

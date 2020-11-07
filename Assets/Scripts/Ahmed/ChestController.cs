@@ -7,6 +7,9 @@ public class ChestController : MonoBehaviour
 {
     [SerializeField] private GUIStyle style;
     [SerializeField] private int keyNumber;
+    [SerializeField] private Sprite openedChest;
+    [SerializeField] private Sprite closedChest;
+    
     private GameObject character;
     private bool inRange;
     private bool opened;
@@ -24,11 +27,13 @@ public class ChestController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isAuthorized)
+        if (isAuthorized && !opened)
         {
             character.GetComponent<CharacterInventory>().hasAKey = true;
             character.GetComponent<CharacterInventory>().keyNumber = keyNumber;
             hasKey = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = openedChest;
+            opened = true;
         }
         
     }
