@@ -13,6 +13,7 @@ namespace Alessio
         [SerializeField] private int currentHealth;
         [SerializeField] private int maxHealth;
         [SerializeField] private UnityEvent onDeath;
+        [SerializeField] private float knockBackResistance;
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
         [SerializeField] private float invincibilityVisualDelay;
         [SerializeField] private float invincibilityDuration;
@@ -47,7 +48,7 @@ namespace Alessio
 
         public void KnockBack()
         {
-            _rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * knockBackForce);
+            _rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * (knockBackForce - knockBackResistance));
             StartCoroutine("CancelKnockBack");
         }
 
