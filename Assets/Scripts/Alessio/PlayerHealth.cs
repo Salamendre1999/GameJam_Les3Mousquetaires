@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +15,13 @@ namespace Alessio
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
         [SerializeField] private float invincibilityVisualDelay;
         [SerializeField] private float invincibilityDuration;
+        [SerializeField] private int knockBackForce = 100;
+        private Rigidbody2D _rigidbody2D;
+
+        private void Awake()
+        {
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+        }
 
         public void TakeDamage(int damage)
         {
@@ -27,7 +35,14 @@ namespace Alessio
                 
                 if (currentHealth <= 0)
                     onDeath?.Invoke(); 
+                
+                KnockBack();
             }
+        }
+
+        public void KnockBack()
+        {
+            _rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * knockBackForce);
         }
 
         private IEnumerator InvincibilityVisual()

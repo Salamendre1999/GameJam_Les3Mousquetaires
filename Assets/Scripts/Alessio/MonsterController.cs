@@ -8,9 +8,11 @@ namespace Alessio
         [SerializeField] private float moveSpeed;
         private Rigidbody2D _rigidbody2D;
         private Vector2 _movement;
+        public static Vector2 EnemyLocalScale;
 
         private void Awake()
         {
+            EnemyLocalScale = transform.localScale;
             _rigidbody2D = this.GetComponent<Rigidbody2D>();
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
