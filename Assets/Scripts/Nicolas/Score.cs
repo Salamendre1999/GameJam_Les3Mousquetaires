@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Nicolas
@@ -7,7 +8,8 @@ namespace Nicolas
     {
 
         public Text TimerText;
-        public bool playing;
+        public bool playing = true;
+        public int maxScore = 5000;
 
         private float Timer;
 
@@ -19,7 +21,7 @@ namespace Nicolas
         {
             if (playing == true)
             {
-                scoreAmount += 1f * Time.deltaTime;
+                
                 Timer += Time.deltaTime;
                 int minutes = Mathf.FloorToInt(Timer / 60f);
                 int seconds = Mathf.FloorToInt(Timer % 60f);
@@ -27,6 +29,14 @@ namespace Nicolas
                 TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00") + ":" +
                                  milliseconds.ToString("00");
             }
+ /*
+            int minute = Int32.Parse(TimerText.text.Substring(0, 2));
+            scoreAmount = maxScore - minute;
+            int seconde = Int32.Parse(TimerText.text.Substring(3, 5));
+            scoreAmount = maxScore - seconde;
+            int milli = Int32.Parse(TimerText.text.Substring(6, 8));
+            scoreAmount = maxScore - milli;
+*/
         }
     }
 }

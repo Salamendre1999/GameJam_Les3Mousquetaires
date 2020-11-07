@@ -9,6 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc80c15954758e1439045b2900395a82, type: 3}
+  m_Script: {fileID: 11500000, guid: 00f49990fad9a8d49b45c0e6d033657a, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: 
+  monsterName: zombie
+  artwork: {fileID: -1865513366290063461, guid: 7274613d7be265146ac23d46d2d31136,
+    type: 3}
+  damage: 5
+  health: 5
