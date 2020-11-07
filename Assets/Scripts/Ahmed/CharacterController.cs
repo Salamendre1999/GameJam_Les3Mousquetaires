@@ -7,14 +7,13 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D playerRigidBody2D;
-    private Animator weaponAnimator;
+    [SerializeField] private Animator weaponAnimator;
     private bool lookAtRight = true;
     private bool lookAtTop = false;
     private bool lookAtBot = false;
     private void Awake()
     {
         playerRigidBody2D = gameObject.GetComponent<Rigidbody2D>();
-        weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
     }
 
     public void Move(float horizontalMove, float verticalMove, bool isAttacking)
