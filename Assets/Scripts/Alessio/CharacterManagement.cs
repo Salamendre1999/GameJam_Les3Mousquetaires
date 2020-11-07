@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 namespace Alessio
 {
-    public class CharacterManagement : MonoBehaviour
+    public abstract class CharacterManagement : MonoBehaviour
     {
         [SerializeField] protected int currentHealth;
         [SerializeField] protected int maxHealth;
@@ -15,7 +15,10 @@ namespace Alessio
         [SerializeField] protected float knockBackDuration;
         [SerializeField] protected int knockBackForce = 100;
         [SerializeField] protected Rigidbody2D rigidbody2D;
-        
+
+        public int CurrentHealth { get; set; }
+        public int MaxHealth { get; set; }
+
         private void Awake()
         {
             rigidbody2D = GetComponent<Rigidbody2D>();

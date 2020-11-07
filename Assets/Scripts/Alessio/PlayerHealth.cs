@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 namespace Alessio
 {
-    public class PlayerHealth : CharacterManagement, IDamageable
+    public class PlayerHealth : Health, IDamageable
     {
         [SerializeField] private bool isInvincible = false;
         [SerializeField] private SpriteRenderer playerSpriteRenderer;
@@ -31,17 +31,11 @@ namespace Alessio
                     onDeath?.Invoke();
                 
                 StartCoroutine(cameraShake.Shake(.15f, .4f));
-                KnockBack();
                 isInvincible = false;
 
             }
         }
-
-        public void KnockBack()
-        {
-            rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * (knockBackForce - knockBackResistance));
-            StartCoroutine("CancelKnockBack");
-        }
+        
         
     }
 }

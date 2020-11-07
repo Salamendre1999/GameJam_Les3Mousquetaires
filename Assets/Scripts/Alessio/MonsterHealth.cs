@@ -7,22 +7,14 @@ using UnityEngine.Events;
 
 namespace Alessio
 {
-    public class MonsterHealth : CharacterManagement, IDamageable
+    public class MonsterHealth : Health, IDamageable
     {
-        [SerializeField] private Monster monsterData;
-
         public void TakeDamage(int damage)
         {
             currentHealth -= damage;
             if (currentHealth <= 0)
                 onDeath?.Invoke();
-            KnockBack();
         }
 
-        public void KnockBack()
-        {
-            rigidbody2D.AddForce(Vector2.right * MonsterController.EnemyLocalScale * (knockBackForce - knockBackResistance));
-            StartCoroutine("CancelKnockBack");
-        }
     }
 }
