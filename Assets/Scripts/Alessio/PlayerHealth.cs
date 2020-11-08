@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Nicolas;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -15,15 +16,28 @@ namespace Alessio
         [SerializeField] private float invincibilityVisualDelay;
         [SerializeField] private float invincibilityDuration;
         public PlayerInvincibilityFrame playerInvincibilityFrame;
+        [SerializeField] private HealthBar healthBar;
 
         public bool IsInvincible => isInvincible;
 
+
+        public void Start()
+        {
+            healthBar.SetMaxHealth(currentHealth);
+        }
+
+
         public void TakeDamage(int damage)
         {
+           
+            
             if (!isInvincible)
             {
+                
                 currentHealth -= damage;
+                healthBar.SetHealth(currentHealth);
                 isInvincible = true;
+                
 
                 if (currentHealth <= 0)
                 {

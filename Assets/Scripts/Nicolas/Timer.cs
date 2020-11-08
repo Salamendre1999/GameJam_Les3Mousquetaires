@@ -6,24 +6,25 @@ namespace Nicolas
 {
     public class Timer : MonoBehaviour
     {
-        public Text timeText;
-        public bool playing;
-        public float timer;
+        private Text _timeText;
+        private bool _playing;
+        private float _timer;
 
-        private void StartGame()
+        public void Start()
         {
-            playing = true;
+            _timeText = GetComponent<Text>();
+            _playing = true;
         }
 
         private void Update()
         {
-            if (playing == true)
+            if (_playing == true)
             {
-                timer += Time.deltaTime;
-                int minutes = Mathf.FloorToInt((timer / 60F));
-                int seconds = Mathf.FloorToInt((timer % 60F));
-                int milliseconds = Mathf.FloorToInt((timer * 100F) % 100F);
-                timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00") + ":" +
+                _timer += Time.deltaTime;
+                int minutes = Mathf.FloorToInt((_timer / 60F));
+                int seconds = Mathf.FloorToInt((_timer % 60F));
+                int milliseconds = Mathf.FloorToInt((_timer * 100F) % 100F);
+                _timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00") + ":" +
                                 milliseconds.ToString("00");
                 
             }

@@ -24,18 +24,9 @@ namespace Nicolas
         void Update()
         {
             
-
             scoreText.text = (int) scoreAmount + "Score";
             scoreAmount += pointIncreasedPerSecond * Time.deltaTime;
             
-            /*
-                       int minute = Int32.Parse(TimerText.text.Substring(0, 2));
-                       scoreAmount = maxScore - minute;
-                       int seconde = Int32.Parse(TimerText.text.Substring(3, 5));
-                       scoreAmount = maxScore - seconde;
-                       int milli = Int32.Parse(TimerText.text.Substring(6, 8));
-                       scoreAmount = maxScore - milli;
-           */
         }
     }
 }
