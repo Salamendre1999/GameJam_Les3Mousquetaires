@@ -2534,7 +2534,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 719417692}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 5
@@ -4892,12 +4892,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &719417692 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6336853341396990700, guid: deda8b39b981fc9428cfec1c059afb58,
-    type: 3}
-  m_PrefabInstance: {fileID: 6336853340954528688}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &720457235
 GameObject:
   m_ObjectHideFlags: 0
@@ -32968,7 +32962,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1405459573
 MonoBehaviour:
@@ -53082,6 +53076,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3618767996833963990, guid: deda8b39b981fc9428cfec1c059afb58,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1634081578}
     - target: {fileID: 6336853341341991880, guid: deda8b39b981fc9428cfec1c059afb58,
         type: 3}
       propertyPath: m_Enabled
