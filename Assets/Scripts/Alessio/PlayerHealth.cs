@@ -57,9 +57,7 @@ namespace Alessio
 
         public void ResetInvincibility()
         {
-            Debug.Log("Callback : " + isInvincible);
             isInvincible = false;
-            Debug.Log("Callback : " + isInvincible);
         } 
     }
 }
