@@ -4,13 +4,12 @@ namespace Alessio
 {
     public class RangedEnemyController : MonoBehaviour
     {
-        [SerializeField] private Transform target;
         [SerializeField] private FireControlller fireControlller;
         [SerializeField] private float fireRate;
         [SerializeField] private float fireBallDelay;
-    
-    
+        private Transform target;
         private Rigidbody2D _rigidbody2D;
+        
 
         private void Awake()
         {
