@@ -33,6 +33,10 @@ namespace Alessio
 
         private void OnTriggerStay2D(Collider2D other)
         {
+            if (other.CompareTag("Weapon"))
+            {
+                return;
+            }
             OnTriggerEnter2D(other);
         }
     }
