@@ -45,7 +45,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: cb3aa2c1c32da064bb120df2c9c84eb1, type: 3}
     - {fileID: 2800000, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
     - {fileID: 2800000, guid: 571030c2b1638664ba4424c704fc4560, type: 3}
-    totalSpriteSurfaceArea: 10363
+    totalSpriteSurfaceArea: 10571
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -78,6 +78,7 @@ SpriteAtlas:
   - {fileID: -2379081495769866741, guid: 571030c2b1638664ba4424c704fc4560, type: 3}
   - {fileID: -5122681035914893960, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
   - {fileID: 8901929280354850880, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
+  - {fileID: -7476853483033896908, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
   - {fileID: -4590863263307369687, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
   - {fileID: 3464155034166208913, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
   - {fileID: -451688941019097673, guid: 8ad5a7951ab3b5a4aabddc604dbf86ad, type: 3}
@@ -122,6 +123,7 @@ SpriteAtlas:
   - 0x72_16x16DungeonTileset_walls.v2_1
   - 0x72_16x16DungeonTileset.v4_15
   - 0x72_16x16DungeonTileset.v4_14
+  - 0x72_16x16DungeonTileset.v4_16
   - 0x72_16x16DungeonTileset.v4_11
   - 0x72_16x16DungeonTileset.v4_10
   - 0x72_16x16DungeonTileset.v4_13

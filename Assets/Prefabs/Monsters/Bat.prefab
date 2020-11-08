@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d9962f86eee8746835ad7b0b9ea9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 5
 --- !u!114 &1985441681552055227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +222,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   animator: {fileID: 1985441681197254518}
+  collider: {fileID: 1985441681197254519}
 --- !u!50 &1985441681552055205
 Rigidbody2D:
   serializedVersion: 4

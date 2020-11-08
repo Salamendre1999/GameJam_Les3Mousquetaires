@@ -114,6 +114,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   animator: {fileID: 2169957451770156652}
+  collider: {fileID: 2169957451770156653}
 --- !u!1 &2169957451770156643
 GameObject:
   m_ObjectHideFlags: 0

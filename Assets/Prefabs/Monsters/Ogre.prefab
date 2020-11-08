@@ -72,6 +72,7 @@ MonoBehaviour:
   fireControlller: {fileID: 3016891737437653433}
   fireRate: 0.5
   fireBallDelay: 0.3
+  rangeForAttacking: 10
 --- !u!114 &3016891737437653433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +118,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   animator: {fileID: 3016891738792454085}
+  collider: {fileID: 3016891738792454087}
 --- !u!1 &3016891738792454080
 GameObject:
   m_ObjectHideFlags: 0
