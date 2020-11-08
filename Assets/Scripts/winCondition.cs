@@ -1,6 +1,5 @@
 ﻿using Nicolas;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class winCondition : MonoBehaviour
 {

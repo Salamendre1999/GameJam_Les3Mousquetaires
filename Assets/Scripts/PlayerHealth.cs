@@ -1,5 +1,4 @@
-﻿using System;
-using Nicolas;
+﻿using Nicolas;
 using UnityEngine;
 
 namespace Alessio
