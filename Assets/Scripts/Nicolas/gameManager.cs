@@ -14,9 +14,9 @@ namespace Nicolas
         {
         }
     
-        public void NewGame()
+        public void PlayGame()
         {
-            LoadScene("Level1");
+            LoadScene("Ahmed");
                 
         }
     
@@ -29,6 +29,19 @@ namespace Nicolas
         {
             LoadScene("MainMenu");
         }
+        
+         public void Win()
+         {
+                    LoadScene("Win");
+         }
+         public void Settings()
+                  {
+                             LoadScene("Settings");
+                  }
+         
+         
+        
+        
     
         public void LoadScene(string sceneName)
         {
@@ -36,10 +49,7 @@ namespace Nicolas
             var asyncload = SceneManager.LoadSceneAsync(sceneName);
         }
     
-        public void ExitGame()
-        {
-            Application.Quit();
-        }
+        
     }
 }
 
