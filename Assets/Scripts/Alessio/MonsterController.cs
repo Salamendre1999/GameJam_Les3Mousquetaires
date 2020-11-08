@@ -4,8 +4,8 @@ namespace Alessio
 {
     public class MonsterController : MonoBehaviour
     {
-        [SerializeField] private Transform target;
         [SerializeField] private float moveSpeed;
+        private Transform _target;
         private Rigidbody2D _rigidbody2D;
         private Vector2 _movement;
         public static Vector2 EnemyLocalScale;
@@ -13,13 +13,13 @@ namespace Alessio
         private void Awake()
         {
             EnemyLocalScale = transform.localScale;
-            _rigidbody2D = this.GetComponent<Rigidbody2D>();
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+            _target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
         private void Update()
         {
-            Vector3 direction = target.position - transform.position;
+            Vector3 direction = _target.position - transform.position;
             direction.Normalize();
             _movement = direction;
         }
