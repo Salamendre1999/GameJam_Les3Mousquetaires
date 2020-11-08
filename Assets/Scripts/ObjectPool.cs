@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -28,6 +29,11 @@ namespace Alessio
         {
             if (pooledObject)
                 _pools[pooledObject] = this;
+        }
+
+        private void OnDestroy()
+        {
+            _pools.Remove(pooledObject);
         }
 
         public bool TryAquire(out GameObject toAcquire)

@@ -154,24 +154,36 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6026785254918580702}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 995b2a4682145c14ead14936c78b1c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnState: 2
   waves:
-  - waveName: Zombie Wave
+  - waveName: First wave
     waveEnemies:
-    - {fileID: 6155861341003841385, guid: 54046a6117c47b848ab11d735aff630f, type: 3}
-    numberOfEnemies: 5
-    spawnRate: 0.5
-  - waveName: Bat wave
-    waveEnemies:
-    - {fileID: 3481114877818464145, guid: 5bf75524d159d2e47ac355c9112fdb88, type: 3}
-    numberOfEnemies: 5
-    spawnRate: 0.5
+    - {fileID: 2169957451433958712, guid: 54046a6117c47b848ab11d735aff630f, type: 3}
+    - {fileID: 1985441681552055225, guid: 5bf75524d159d2e47ac355c9112fdb88, type: 3}
+    numberOfEnemies: 250
+    spawnRate: 1
   spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

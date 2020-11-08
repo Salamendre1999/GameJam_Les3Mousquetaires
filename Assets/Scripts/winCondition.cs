@@ -14,10 +14,6 @@ public class winCondition : MonoBehaviour
         {
             clicked = true;
         }
-    }
-
-    private void FixedUpdate()
-    {
         if (inRange && clicked)
         {
             GameManager.Instance.Win();

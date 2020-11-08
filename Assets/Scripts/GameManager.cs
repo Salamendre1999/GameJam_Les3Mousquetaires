@@ -16,7 +16,6 @@ namespace Nicolas
         public void PlayGame()
         {
             LoadScene("MainStage");
-                
         }
     
         public void GameOver()
